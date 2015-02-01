@@ -21,6 +21,7 @@ import com.android.systemui.qs.tileimpl.QSTileImpl
 import org.blissroms.systemui.qs.tiles.CaffeineTile
 import org.blissroms.systemui.qs.tiles.HeadsUpTile
 import org.blissroms.systemui.qs.tiles.SyncTile
+import org.blissroms.systemui.qs.tiles.UsbTetherTile
 
 import dagger.Binds
 import dagger.Module
@@ -47,4 +48,10 @@ interface BlissQSModule {
     @IntoMap
     @StringKey(SyncTile.TILE_SPEC)
     fun bindSyncTile(syncTile: SyncTile): QSTileImpl<*>
+
+    /** Inject UsbTetherTile into tileMap in QSModule */
+    @Binds
+    @IntoMap
+    @StringKey(UsbTetherTile.TILE_SPEC)
+    fun bindUsbTetherTile(usbTetherTile: UsbTetherTile): QSTileImpl<*>
 }
