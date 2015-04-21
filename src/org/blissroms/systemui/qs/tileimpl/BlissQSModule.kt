@@ -19,6 +19,7 @@ package org.blissroms.systemui.qs.tileimpl
 import com.android.systemui.qs.tileimpl.QSTileImpl
 
 import org.blissroms.systemui.qs.tiles.CaffeineTile
+import org.blissroms.systemui.qs.tiles.HeadsUpTile
 
 import dagger.Binds
 import dagger.Module
@@ -33,4 +34,10 @@ interface BlissQSModule {
     @IntoMap
     @StringKey(CaffeineTile.TILE_SPEC)
     fun bindCaffeineTile(caffeineTile: CaffeineTile): QSTileImpl<*>
+
+    /** Inject HeadsUpTile into tileMap in QSModule */
+    @Binds
+    @IntoMap
+    @StringKey(HeadsUpTile.TILE_SPEC)
+    fun bindHeadsUpTile(headsUpTile: HeadsUpTile): QSTileImpl<*>
 }
