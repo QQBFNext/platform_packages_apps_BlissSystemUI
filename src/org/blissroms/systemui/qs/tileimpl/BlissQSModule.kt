@@ -14,9 +14,11 @@
  * limitations under the License.
  */
 
-package org.blissroms.systemui.qs.tileimpl;
+package org.blissroms.systemui.qs.tileimpl
 
 import com.android.systemui.qs.tileimpl.QSTileImpl
+
+import org.blissroms.systemui.qs.tiles.CaffeineTile
 
 import dagger.Binds
 import dagger.Module
@@ -26,4 +28,9 @@ import dagger.multibindings.StringKey
 @Module
 interface BlissQSModule {
 
+    /** Inject CaffeineTile into tileMap in QSModule */
+    @Binds
+    @IntoMap
+    @StringKey(CaffeineTile.TILE_SPEC)
+    fun bindCaffeineTile(caffeineTile: CaffeineTile): QSTileImpl<*>
 }
