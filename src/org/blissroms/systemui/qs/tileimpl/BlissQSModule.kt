@@ -18,6 +18,7 @@ package org.blissroms.systemui.qs.tileimpl
 
 import com.android.systemui.qs.tileimpl.QSTileImpl
 
+import org.blissroms.systemui.qs.tiles.AODTile
 import org.blissroms.systemui.qs.tiles.CaffeineTile
 import org.blissroms.systemui.qs.tiles.HeadsUpTile
 import org.blissroms.systemui.qs.tiles.SyncTile
@@ -34,6 +35,12 @@ import dagger.multibindings.StringKey
 
 @Module
 interface BlissQSModule {
+
+    /** Inject AODTile into tileMap in QSModule */
+    @Binds
+    @IntoMap
+    @StringKey(AODTile.TILE_SPEC)
+    fun bindAODTile(AODTile: AODTile): QSTileImpl<*>
 
     /** Inject CaffeineTile into tileMap in QSModule */
     @Binds
