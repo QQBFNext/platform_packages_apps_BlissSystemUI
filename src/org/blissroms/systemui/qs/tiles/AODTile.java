@@ -54,6 +54,13 @@ public final class AODTile extends QSTileImpl<BooleanState> {
     private final SecureSettings mSecureSettings;
 
     private final ContentObserver mObserver;
+
+    private static final ComponentName LS_DISPLAY_SETTINGS_COMPONENT = new ComponentName(
+            "com.android.settings", "com.android.settings.Settings$LockscreenDashboardActivity");
+
+    private static final Intent LS_DISPLAY_SETTINGS =
+            new Intent().setComponent(LS_DISPLAY_SETTINGS_COMPONENT);
+
     @Inject
     public AODTile(
         QSHost host,
@@ -111,7 +118,7 @@ public final class AODTile extends QSTileImpl<BooleanState> {
 
     @Override
     public Intent getLongClickIntent() {
-        return null;
+        return LS_DISPLAY_SETTINGS;
     }
 
     @Override
