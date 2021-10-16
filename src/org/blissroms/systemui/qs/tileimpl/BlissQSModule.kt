@@ -24,6 +24,7 @@ import org.blissroms.systemui.qs.tiles.SyncTile
 import org.blissroms.systemui.qs.tiles.UsbTetherTile
 import org.blissroms.systemui.qs.tiles.AODTile
 import org.blissroms.systemui.qs.tiles.DataSwitchTile
+import org.blissroms.systemui.qs.tiles.SoundTile
 
 import dagger.Binds
 import dagger.Module
@@ -56,6 +57,12 @@ interface BlissQSModule {
     @IntoMap
     @StringKey(HeadsUpTile.TILE_SPEC)
     fun bindHeadsUpTile(headsUpTile: HeadsUpTile): QSTileImpl<*>
+
+    /** Inject SoundTile into tileMap in QSModule */
+    @Binds
+    @IntoMap
+    @StringKey(SoundTile.TILE_SPEC)
+    fun bindSoundTile(soundTile: SoundTile): QSTileImpl<*>
 
     /** Inject SyncTile into tileMap in QSModule */
     @Binds
