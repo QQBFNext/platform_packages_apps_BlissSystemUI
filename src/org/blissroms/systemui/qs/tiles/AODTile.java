@@ -104,7 +104,7 @@ public final class AODTile extends QSTileImpl<State> implements
     @Override
     protected void handleInitialize() {
         super.handleInitialize();
-        mBatteryController.observe(getLifecycle(), this);
+        mUiHandler.post(() -> mBatteryController.observe(getLifecycle(), this));
     }
 
     @Override
