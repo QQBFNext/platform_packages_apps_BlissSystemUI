@@ -7,6 +7,11 @@ package {
     default_applicable_licenses: ["packages_apps_BlissSystemUI_license"],
 }
 
+soong_config_module_type_import {
+    from: "frameworks/base/packages/SystemUI/Android.bp",
+    module_types: ["systemui_optimized_java_defaults"],
+}
+
 // Added automatically by a large-scale-change
 // See: http://go/android-license-faq
 license {
@@ -47,10 +52,30 @@ android_library {
     plugins: ["dagger2-compiler"],
 }
 
+systemui_optimized_java_defaults {
+    name: "BlissSystemUI_app_defaults",
+    soong_config_variables: {
+        SYSTEMUI_OPTIMIZE_JAVA: {
+            optimize: {
+                enabled: true,
+                optimize: true,
+                shrink: true,
+                proguard_flags_files: ["proguard.flags"],
+            },
+            conditions_default: {
+                optimize: {
+                    proguard_flags_files: ["proguard.flags"],
+                },
+            },
+        },
+    },
+}
+
 android_app {
     name: "BlissSystemUI",
     defaults: [
         "platform_app_defaults",
+        "BlissSystemUI_app_defaults",
     ],
     static_libs: [
         "BlissSystemUI-core",
