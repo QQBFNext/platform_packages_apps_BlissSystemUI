@@ -5,4 +5,9 @@
 -->
 <resources>
 
+    <!-- SystemUIFactory component -->
+    <string name="config_systemUIFactoryComponent" translatable="false">
+        org.blissroms.systemui.BlissSystemUIInitializer
+    </string>
+
 </resources>
