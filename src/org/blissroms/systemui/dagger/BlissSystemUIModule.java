@@ -29,7 +29,6 @@ import com.android.systemui.plugins.qs.QSFactory;
 import com.android.systemui.plugins.statusbar.StatusBarStateController;
 import com.android.systemui.power.dagger.PowerModule;
 import com.android.systemui.qs.dagger.QSModule;
-import com.android.systemui.qs.tileimpl.QSFactoryImpl;
 import com.android.systemui.recents.Recents;
 import com.android.systemui.recents.RecentsImplementation;
 import com.android.systemui.rotationlock.RotationLockModule;
@@ -63,6 +62,9 @@ import com.android.systemui.statusbar.policy.SensorPrivacyController;
 import com.android.systemui.statusbar.policy.SensorPrivacyControllerImpl;
 import com.android.systemui.volume.dagger.VolumeModule;
 
+import org.blissroms.systemui.qs.tileimpl.BlissQSFactoryImpl;
+import org.blissroms.systemui.qs.tileimpl.BlissQSModule;
+
 import javax.inject.Named;
 
 import dagger.Binds;
@@ -86,6 +88,7 @@ import dagger.Provides;
  */
 @Module(includes = {
         AospPolicyModule.class,
+        BlissQSModule.class,
         BatterySaverModule.class,
         GestureModule.class,
         MediaModule.class,
@@ -132,7 +135,7 @@ public abstract class BlissSystemUIModule {
     /** */
     @Binds
     @SysUISingleton
-    public abstract QSFactory bindQSFactory(QSFactoryImpl qsFactoryImpl);
+    public abstract QSFactory bindQSFactory(BlissQSFactoryImpl qsFactoryImpl);
 
     @Binds
     abstract DockManager bindDockManager(DockManagerImpl dockManager);
