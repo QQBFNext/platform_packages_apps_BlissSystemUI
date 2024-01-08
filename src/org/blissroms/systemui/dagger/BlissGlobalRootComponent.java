@@ -17,6 +17,9 @@ import dagger.Component;
 @Component(modules = {GlobalModule.class})
 public interface BlissGlobalRootComponent extends GlobalRootComponent {
 
+    /**
+     * Builder for BlissGlobalRootComponent
+     */
     @Component.Builder
     interface Builder extends GlobalRootComponent.Builder {
         BlissGlobalRootComponent build();

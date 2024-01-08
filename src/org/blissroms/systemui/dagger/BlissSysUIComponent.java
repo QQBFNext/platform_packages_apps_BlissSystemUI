@@ -8,16 +8,16 @@ package org.blissroms.systemui.dagger;
 
 import com.android.systemui.dagger.DefaultComponentBinder;
 import com.android.systemui.dagger.DependencyProvider;
-import com.android.systemui.dagger.SysUIComponent;
-import com.android.systemui.dagger.SysUISingleton;
-import com.android.systemui.dagger.ReferenceSystemUIModule;
+import com.android.systemui.dagger.SystemUIBinder;
 import com.android.systemui.dagger.SystemUICoreStartableModule;
 import com.android.systemui.dagger.SystemUIModule;
+import com.android.systemui.dagger.SysUIComponent;
+import com.android.systemui.dagger.SysUISingleton;
+import com.android.systemui.globalactions.ShutdownUiModule;
 import com.android.systemui.keyguard.CustomizationProvider;
+import com.android.systemui.shade.ShadeModule;
 import com.android.systemui.statusbar.NotificationInsetsModule;
 import com.android.systemui.statusbar.QsFrameTranslateModule;
-
-import org.blissroms.systemui.dagger.BlissSystemUIBinder;
 
 import dagger.Subcomponent;
 
@@ -27,11 +27,17 @@ import dagger.Subcomponent;
         DependencyProvider.class,
         NotificationInsetsModule.class,
         QsFrameTranslateModule.class,
+        ShadeModule.class,
+        ShutdownUiModule.class,
+        SystemUIBinder.class,
         SystemUIModule.class,
         SystemUICoreStartableModule.class,
-        BlissSystemUIModule.class,
-	BlissSystemUIBinder.class})
+        BlissSystemUIModule.class})
 public interface BlissSysUIComponent extends SysUIComponent {
+
+    /**
+     * Builder for a BlissSystemUIComponent.
+     */
     @SysUISingleton
     @Subcomponent.Builder
     interface Builder extends SysUIComponent.Builder {
