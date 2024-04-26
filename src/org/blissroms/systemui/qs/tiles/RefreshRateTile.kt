@@ -91,7 +91,7 @@ class RefreshRateTile @Inject constructor(
         }
 
         val display: Display? = mContext.getSystemService(
-                DisplayManager::class.java).getDisplay(Display.DEFAULT_DISPLAY)
+                DisplayManager::class.java)!!.getDisplay(Display.DEFAULT_DISPLAY)
         display?.let {
             it.getSupportedModes().forEach({ mode ->
                 mode.refreshRate.let { rr ->
@@ -211,7 +211,7 @@ class RefreshRateTile @Inject constructor(
     private inner class SettingsObserver: ContentObserver(mainHandler) {
         private var isObserving = false
 
-        override fun onChange(selfChange: Boolean, uri: Uri) {
+        override fun onChange(selfChange: Boolean, uri: Uri?) {
             if (!ignoreSettingsChange) updateMode()
         }
 
@@ -240,7 +240,7 @@ class RefreshRateTile @Inject constructor(
         private val displaySettingsIntent = Intent().setComponent(ComponentName("com.android.settings",
             "com.android.settings.Settings\$DisplaySettingsActivity"))
 
-        private fun logD(msg: String?) {
+        private fun logD(msg: String) {
             if (DEBUG) Log.d(TAG, msg)
         }
     }
