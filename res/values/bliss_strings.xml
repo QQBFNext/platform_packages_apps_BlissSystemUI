@@ -13,13 +13,13 @@
 
     <!-- Caffeine QS tile -->
     <string name="quick_settings_caffeine_label">Caffeine</string>
-    <string name="accessibility_quick_settings_caffeine_off">Caffeine off.</string>
-    <string name="accessibility_quick_settings_caffeine_on">Caffeine on.</string>
+    <string name="accessibility_quick_settings_caffeine_off">Caffeine выключен.</string>
+    <string name="accessibility_quick_settings_caffeine_on">Caffeine включен.</string>
 
     <!-- Heads up QS tile -->
     <string name="quick_settings_heads_up_label">Heads up</string>
-    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up выключен.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up включен.</string>
 
     <!-- PowerShare QS tile -->
     <string name="quick_settings_powershare_label">Battery Share</string>
