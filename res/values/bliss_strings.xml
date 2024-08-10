@@ -7,9 +7,9 @@
 
     <!-- AOD QS tile -->
     <string name="quick_settings_aod_label">AOD</string>
-    <string name="quick_settings_aod_on_charge_label">AOD on charge</string>
-    <string name="quick_settings_aod_off_label">AOD off</string>
-    <string name="quick_settings_aod_off_powersave_label">AOD off\nBattery saver</string>
+    <string name="quick_settings_aod_on_charge_label">AOD на зарядке</string>
+    <string name="quick_settings_aod_off_label">AOD выключен</string>
+    <string name="quick_settings_aod_off_powersave_label">AOD выключен\nЭнергосберегающий</string>
 
     <!-- Caffeine QS tile -->
     <string name="quick_settings_caffeine_label">Caffeine</string>
@@ -23,7 +23,7 @@
 
     <!-- PowerShare QS tile -->
     <string name="quick_settings_powershare_label">Battery Share</string>
-    <string name="quick_settings_powershare_enabled_label">Battery Share is enabled</string>
+    <string name="quick_settings_powershare_enabled_label">Battery Share включен</string>
 
     <!-- Sync QS tile -->
     <string name="quick_settings_sync_label">Sync</string>
@@ -31,28 +31,28 @@
     <string name="accessibility_quick_settings_sync_on">Sync on.</string>
 
     <!-- USB tethering QS tile -->
-    <string name="quick_settings_usb_tether_label">USB tethering</string>
+    <string name="quick_settings_usb_tether_label">USB соединение</string>
 
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Sound</string>
-    <string name="quick_settings_sound_ring">Ring</string>
-    <string name="quick_settings_sound_vibrate">Vibrate</string>
-    <string name="quick_settings_sound_mute">Mute</string>
+    <string name="quick_settings_sound_label">Звонок</string>
+    <string name="quick_settings_sound_ring">Звук</string>
+    <string name="quick_settings_sound_vibrate">Вибрация</string>
+    <string name="quick_settings_sound_mute">Без звука</string>
 
     <!-- Refresh Rate Tile -->
-    <string name="refresh_rate_tile_label">Refresh rate</string>
+    <string name="refresh_rate_tile_label">Частота обновления</string>
     <string name="auto_mode_label">Auto</string>
 
     <!-- Volume panel QS tile -->
-    <string name="quick_settings_volume_panel_label">Volume panel</string>
+    <string name="quick_settings_volume_panel_label">Панель громкости</string>
 
     <!-- Ambient display QS tile -->
     <string name="quick_settings_ambient_display_label">Ambient display</string>
-    <string name="accessibility_quick_settings_ambient_display_off">Ambient display off.</string>
-    <string name="accessibility_quick_settings_ambient_display_on">Ambient display on.</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Ambient display выключен.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Ambient display включен.</string>
 
     <!-- Reader mode QS tile -->
-    <string name="quick_settings_reading_mode">Reading mode</string>
-    <string name="accessibility_quick_settings_reading_mode_on">Reading mode on.</string>
-    <string name="accessibility_quick_settings_reading_mode_off">Reading mode off.</string>
+    <string name="quick_settings_reading_mode">Режим чтения</string>
+    <string name="accessibility_quick_settings_reading_mode_on">Режим чтения включен.</string>
+    <string name="accessibility_quick_settings_reading_mode_off">Режим чтения выключен.</string>
 </resources>
